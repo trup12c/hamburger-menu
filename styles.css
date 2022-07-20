@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(25, 227, 156);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.menu-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease;
+    border: 3px solid black;
+}
+.menu-btn-1{
+    position: relative;
+    width: 50px;
+    height: 6px;
+    background: black;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+
+/* Top and Bottom */
+.menu-btn-1::before, .menu-btn-1::after{
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 50px;
+    height: 6px;
+    background: black;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+ /* moves lines down */
+.menu-btn-1::after{
+    top: -15px;
+}
+
+/* animations */
+
+.menu-btn-1:hover{
+    transform: rotate(135deg);
+}
+.menu-btn-1:hover::before, .menu-btn-1:hover::after{
+    top: 0;
+    transform: rotate(90deg);
+}
